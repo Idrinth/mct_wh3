@@ -254,8 +254,8 @@ function mct_mod:get_patch_notes()
     self._patch_notes = "";
     local parts = {};
     for i = self._version[1], 1, -1 do
-        local version_text = common.get_localised_string("mct_patch_notes_"..i.."_version")
-        local notes = common.get_localised_string("mct_patch_notes_"..i.."_notes")
+        local version_text = common.get_localised_string("mct_patch_notes_"..self:get_key().."_"..i.."_version")
+        local notes = common.get_localised_string("mct_patch_notes_"..self:get_key().."_"..i.."_notes")
         if version_text == "" then
             version_text = "i"..i
         end;
